@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventilation Equipment</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    header {
+      margin-bottom: 160px;
+    }
+
+    .navbar {
+      background-color: white;
+      margin-bottom: 10px;
+      margin-right: 50px;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+    }
+    .navbar-brand img {
+      height: 50px;
+      margin-right: 40px;
+    }
+    .navbar-nav {
+      margin-left: auto;
+      gap: 10%;
+    }
+    .navbar-nav .nav-link {
+
+      margin-right: 10px;
+    }
+    .navbar-text {
+      margin-right: 10px;
+    }
+    .container {
+      max-width: 1960px;
+      margin: auto;
+      text-align: left;
+
+    }
+    .product-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .product-description {
+      margin-bottom: 20px;
+      margin-left: 30%;
+      margin-top: 10%;
+    }
+    .product-description p
+    {
+      margin-top: 5%;
+      max-width: 50%;
+    }
+    .product-button {
+      width: 50%;
+      background-color: gray;
+      color: white;
+      border-radius: 3px;
+      border: none;
+      padding: 10px 20px;
+    }
+    .feature-text {
+       margin-left: 50px;
+      margin-top: 120px;
+      text-align: left;
+      font-size: 20px;
+    }
+    .feature-title {
+      font-weight: bold;
+    }
+    /*.feature-text p {/
+    /  font-weight: bold;
+    /*}*/
+    .detail-button {
+      background-color: white;
+      color: gray;
+      border: 2px solid gray;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+    .cookie-disclaimer {
+      position: absolute;
+      /*bottom: 0;*/
+      /*right: 2;*/
+      margin-left: 58%;
+      padding: 10px 20px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+    .cookie-link {
+      text-decoration: underline;
+    }
+    .cookie-button {
+      margin-left: 25px;
+      margin-right: 10px;
+      background-color: white;
+      color: gray;
+      border: 1px solid gray;
+      border-radius: 3px;
+      padding: 5px 15px;
+    }
+
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 50px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+        border-radius: 5px;
+        text-align: center;
+        height: 55%;
+      }
+    h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+      .close {
+        margin-left: 95%;
+        color: #aaa;
+        float: right;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    body.blur > *:not(#contactModal):not(#successModal), header.blur > *:not(#contactModal):not(#successModal) {
+      filter: blur(5px);
+    }
+
+    .modal-content button[type="submit"] {
+      width: 50%;
+      background-color: gray;
+      color: white;
+      border: none;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .modal-content input[type="text"],
+    .modal-content input[type="tel"],
+    .modal-content button[type="submit"] {
+     height: 20%;
+      width: 70%;
+      margin: 12px auto;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ced4da;
+    }
+
+    .modal-content button[type="submit"]:hover {
+      background-color: darkgray;
+    }
+    .modal-content input[type="text"],
+    .modal-content input[type="tel"] {
+      border: 1px solid black;
+    }
+
+    .privacy-text {
+      text-align: left;
+      margin-top: 40px;
+      margin-left: 13%;
+
+    }
+    .privacy-text .underline {
+      text-decoration: underline;
+    }
+    #successModal
+    {
+     max-height: 150%;
+    }
+    #successModal .modal-content {
+      height: 80%;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+        <img src="madem.png" alt="Company Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Компания</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Продукция</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Статьи</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Решения</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-text">
+        0 (800) 00-00-00
+      </div>
+
+      <button type="button" class="btn btn-secondary" id="contactBtn">Связаться</button>
+
+      <div class="btn-group btn-language">
+        <button type="button" class="btn btn-sm btn-outline-dark">UA</button>
+        <button type="button" class="btn btn-sm btn-outline-dark">RU</button>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="product-description">
+        <h1>Meltem</h1>
+        <p>Meltem - гарантовано якісне вентиляційне обладнання від німецького заводу.</p>
+        <button class="product-button">Продукція</button>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <img src="vent.png" alt="Ventilation Equipment" class="product-image img-fluid">
+    </div>
+
+    <div class="col-md-4">
+      <div class="feature-text">
+        <p>Відцентровий витяжний вентилятор</p>
+        <p class="feature-title">Meltem V-II 30-N</p>
+        <button class="detail-button">Детальніше</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cookie-disclaimer">
+  <span>Використовуючи цей сайт, ви даєте<br>згоду на роботу з файлами <a href="#" class="cookie-link">cookies</a></span>
+  <button class="cookie-button btn btn-primary">Згоден</button>
+</div>
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Залишайте заявку</h2>
+    <p>Ми зв'яжемося з вами найближчим часом</p>
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Ваше ім'я*" required>
+      </div>
+      <div class="form-group">
+        <input type="tel" class="form-control" placeholder="+380-00-000-00-00*" required>
+      </div>
+      <button type="submit" class="form-control">Відправить</button>
+      <div class="privacy-text">
+        Натискаючи кнопку "Надіслати", ви погоджуєтесь з <br> <span class="underline">Правилами обробки персональних даних</span>.
+      </div>
+    </form>
+  </div>
+</div>
+<div id="successModal" class="modal blur">
+  <div class="modal-content">
+    <span class="close" id="successClose">&times;</span>
+    <img src="success.png" alt="Success Image" style="max-width: 150%">
+    <h2>Дякуємо за заявку!</h2>
+    <p>Ваші дані успішно надіслані!</p>
+  </div>
+</div>
+<script>
+  var modal = document.getElementById("contactModal");
+  var successModal = document.getElementById("successModal");
+  var btn = document.getElementById("contactBtn");
+  var submitButton = document.querySelector("#contactModal button[type='submit']");
+  var span = document.querySelector("#contactModal .close");
+  var body = document.querySelector("body");
+  var header = document.querySelector("header");
+
+
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+    body.classList.add("blur");
+    header.classList.add("blur");
+  }
+
+
+  span.onclick = function() {
+    modal.style.display = "none";
+    body.classList.remove("blur");
+    header.classList.remove("blur");
+  }
+
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      body.classList.remove("blur");
+      header.classList.remove("blur");
+    }
+  }
+  submitButton.onclick = function(event) {
+
+    event.preventDefault();
+    modal.style.display = "none";
+    successModal.style.display = "block";
+  }
+  var successSpan = document.querySelector("#successModal .close");
+
+  successSpan.onclick = function() {
+    successModal.style.display = "none";
+    body.classList.remove("blur");
+    header.classList.remove("blur");
+  }
+  </script>
+</body>
+</html>
